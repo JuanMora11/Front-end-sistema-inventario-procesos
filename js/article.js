@@ -78,18 +78,22 @@ function verModificarArticle(id) {
 
                         <label for="name" class="form-label">Nombre articulo</label>
                         <input type="text" class="form-control" name="name" id="name" required value="${articulo.name}"> <br>
+                        <label for="name" class="form-label">Precio</label>
+                        <input type="text" class="form-control" name="price" id="price" required value="${articulo.price}"> <br>
                         <label for="name" class="form-label">Descripcion</label>
                         <input type="text" class="form-control" name="description" id="description" required value="${articulo.description}"> <br>
+                        <label for="name" class="form-label">Color</label>
+                        <input type="text" class="form-control" name="color" id="color" required value="${articulo.color}"> <br>
+                        <label for="name" class="form-label">Material</label>
+                        <input type="text" class="form-control" name="material" id="material" required value="${articulo.material}"> <br>
+                        <label for="name" class="form-label">quantity</label>
+                        <input type="text" class="form-control" name="quantity" id="quantity" required value="${articulo.quantity}"> <br>
+
                         <label for="idCategorySel" class="form-label">Categoría</label>
                         <select class="form-control" name="idCategorySel" id="idCategorySel" required>
                         ${categorias.map(categoria => `<option value="${categoria.idCategory}" ${articulo.categoria.idCategory === categoria.idCategory ? 'selected' : ''}>${categoria.nameCategory}</option>`).join('')}
                         </select> <br>
-                        
-                        <label for="name" class="form-label">Precio</label>
-                        <input type="text" class="form-control" name="price" id="price" required value="${articulo.price}"> <br>
-                        <label for="name" class="form-label">quantity</label>
-                        <input type="text" class="form-control" name="quantity" id="quantity" required value="${articulo.quantity}"> <br>
-                        
+                    
                         <button type="button" class="btn btn-outline-warning" 
                             onclick="modificarArticle('${articulo.id}')">Modificar
                         </button>
